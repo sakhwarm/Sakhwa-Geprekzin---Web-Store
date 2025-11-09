@@ -102,18 +102,8 @@ addBtns.forEach((btn) => {
   });
 });
 
-// t=untuk hapus semua produk
+// untuk hapus semua produk
 clearBtn.addEventListener("click", () => {
-  if (cartItems.length === 0) {
-    Swal.fire({
-      icon: "info",
-      title: "Keranjang kosong",
-      text: "Tidak ada produk untuk dihapus.",
-      confirmButtonColor: "#6c63ff",
-    });
-    return;
-  }
-
   Swal.fire({
     title: "Hapus semua produk?",
     showCancelButton: true,
