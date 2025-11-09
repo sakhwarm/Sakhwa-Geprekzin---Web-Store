@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+header {
+  background-color: darkred;
+  color: white;
+  padding: 15px 20px;
+}
+
+header .brand {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 30px;
+}
+
+.hero h1 {
+  font-size: 30px;
+}
+
+.hero p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter-btn {
+  border: 1px solid blue;
+  background: white;
+  color: blue;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background-color: blue;
+  color: white;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 30px;
+}
+
+.product {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 5px;
+  transition: transform 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product h3 {
+  margin: 10px;
+}
+
+.product button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.product button:hover {
+  background-color: darkgreen;
+}
+
+.cart-section {
+  background-color: white;
+  padding: 20px;
+}
+
+.cart-section h2 {
+  margin-bottom: 15px;
+}
+
+#cartList li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  padding: 5px;
+}
+
+#cartList button {
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+#clearCart {
+  margin-top: 10px;
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#clearCart:hover {
+  background-color: darkslategray;
+}
