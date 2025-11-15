@@ -35,7 +35,25 @@ $geprekzin= [
       "gambar" => "img/geprek6.jpg", 
       "harga" => 12000, 
       "kategori" => "Geprekzin Aja"
-      ]
+    ],
+    [
+      "nama" => "Katsu Geprekzin", 
+      "gambar" => "img/geprek7.jpg", 
+      "harga" => 10000, 
+      "kategori" => "Geprekzin Aja"
+    ],
+    [
+      "nama" => "Paket Spesial Geprekzin ", 
+      "gambar" => "img/geprek8.jpg", 
+      "harga" => 25000, 
+      "kategori" => "Paket Geprekzin"
+    ],
+    [
+      "nama" => "Sambal Ijo Geprekzin", 
+      "gambar" => "img/geprek9.jpg", 
+      "harga" => 10000, 
+      "kategori" => "Geprekzin Aja"
+    ]
 ];
 ?>
 
@@ -49,37 +67,56 @@ $geprekzin= [
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-  <header>
-    <div class="brand">Sakhwa Geprekzin</div>
-  </header>
 
-  <section class="hero">
+<!-- HEADER START -->
+<header>
+    <div class="brand">
+      <h3>🌶️Sakhwa Geprekzin🌶️</h3>
+    </div>
+</header>
+<!-- HEADER END -->
+
+<!-- SECTION HERO START -->
+<section class="hero">
     <h1>Selamat Datang di Web Store Sakhwa Geprekzin</h1>
     <p>Pilih Geprekzin favoritmu!</p>
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-filter="all">Tampilkan Semua</button>
-      <button class="filter-btn" data-filter="Paket Geprekzin">Paket Geprekzin</button>
-      <button class="filter-btn" data-filter="Geprekzin Aja">Geprekzin Aja</button>
-    </div>
-  </section>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Tampilkan Semua</button>
+        <button class="filter-btn" data-filter="Paket Geprekzin">Paket Geprekzin</button>
+        <button class="filter-btn" data-filter="Geprekzin Aja">Geprekzin Aja</button>
+      </div>
+</section>
+<!-- SECTION HERO START -->
 
-  <main class="product-grid">
+<!-- SECTION PRODUK START -->
+<div class="product-grid">
     <?php foreach ($geprekzin as $geprek): ?>
       <div class="product" data-category="<?= $geprek['kategori'] ?>">
-        <img src="<?= $geprek['gambar'] ?>" alt="<?= $geprek['nama'] ?>">
-        <h3><?= $geprek['nama'] ?></h3>
-        <p>Rp <?= number_format($geprek['harga'], 0, ',', '.') ?></p>
-        <button class="addBtn" data-name="<?= $geprek['nama'] ?>">Tambah ke Keranjang</button>
+          <img src="<?= $geprek['gambar'] ?>" alt="<?= $geprek['nama'] ?>">
+          <h3><?= $geprek['nama'] ?></h3>
+          <p>Rp <?= number_format($geprek['harga'], 0, ',', '.') ?></p>
+          <button class="addBtn" data-name="<?= $geprek['nama'] ?>">Tambah ke Keranjang</button>
       </div>
     <?php endforeach; ?>
-  </main>
-
-  <section class="cart-section">
+</div>
+<!-- SECTION PRODUK START -->
+ 
+<!-- SECTION KERANJANG START -->
+<section class="cart-section">
     <h2>Keranjang Pesanan</h2>
     <ul id="cartList"></ul>
     <h3 id="totalHarga">Total: Rp 0</h3>
     <button id="clearCart">Hapus Semua</button>
-  </section>
+</section>
+<!-- SECTION KERANJANG END -->
+
+<!-- FOOTER START -->
+<footer>
+  <div class= "buatan">
+    <p>Copyright &copy;Sakhwa Raflisa Maulidiwan 2025</p>
+  </div>
+</footer>
+<!-- FOOTER END -->
 
   <script src="script.js"></script>
 </body>

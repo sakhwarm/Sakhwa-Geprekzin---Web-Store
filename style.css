@@ -4,15 +4,14 @@ body {
   background-color: whitesmoke;
 }
 
-header {
+.brand {
   background-color: darkred;
   color: white;
-  padding: 15px 20px;
-}
-
-header .brand {
+  padding: 5px;
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
+  align-items: center;
 }
 
 .hero {
@@ -25,8 +24,7 @@ header .brand {
 }
 
 .hero p {
-  color: #555;
-  margin-bottom: 20px;
+  color: black;
 }
 
 .filter-buttons {
@@ -79,6 +77,10 @@ header .brand {
   margin: 10px;
 }
 
+.product p {
+  color: blue;
+}
+
 .product button {
   background-color: green;
   border: none;
@@ -98,7 +100,7 @@ header .brand {
 }
 
 .cart-section h2 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 #cartList li {
@@ -127,4 +129,12 @@ header .brand {
 
 #clearCart:hover {
   background-color: darkslategray;
+}
+
+.buatan {
+  align-items: center;
+  text-align: center;
+  background-color: darkred;
+  color: white;
+  padding: 5px;
 }
